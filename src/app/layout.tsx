@@ -16,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background min-h-screen`}>
+      <head>
+        {/* Add base tag for correct asset paths */}
+        <base href="/photo-processor-frontend/" />
+      </head>
+      <body className={inter.className}>
         {children}
       </body>
     </html>

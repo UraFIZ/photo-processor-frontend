@@ -4,9 +4,9 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/Card';
 import { Alert } from '@/components/ui/Alert';
-import FileUpload from './FileUpload';
-import ImagePreview from './ImagePreview';
-import ProcessingStatus from './ProcessingStatus';
+import FileUpload from '@/components/image-processing/FileUpload';
+import ImagePreview from '@/components/image-processing/ImagePreview';
+import ProcessingStatus from '@/components/image-processing/ProcessingStatus';
 import { validateImage } from '@/utils/imageValidation';
 import { removeBackground } from '@/lib/api/imageProcessor';
 import { ProcessingPhase, ValidationError } from '@/types/image';
