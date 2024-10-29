@@ -7,6 +7,11 @@ export async function removeBackground(file: File): Promise<string> {
     const response = await fetch('https://photo-processor-backend-api.azurewebsites.net', {
       method: 'POST',
       body: formData,
+      headers: {
+        'Accept': 'application/json',
+        // Don't set Content-Type with FormData, browser will set it automatically
+      },
+      credentials: 'omit'
     });
 
     if (!response.ok) {
