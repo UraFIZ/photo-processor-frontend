@@ -4,7 +4,7 @@ export async function removeBackground(file: File): Promise<string> {
     const formData = new FormData();
     formData.append('file', file); // Make sure the key is 'file' to match FastAPI parameter
 
-    const response = await fetch('http://localhost:5001/api/remove-background', {
+    const response = await fetch('https://photo-processor-backend-api.azurewebsites.net', {
       method: 'POST',
       body: formData,
     });
